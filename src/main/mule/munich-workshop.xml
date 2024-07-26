@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd">
+	<flow name="munich-workshopFlow" doc:id="3773600a-626b-4d91-9e2b-02538d4f0daa" >
+		<scheduler doc:name="Scheduler" doc:id="df48fe18-941f-42e6-8d81-c75c54da1402" >
+			<scheduling-strategy >
+				<fixed-frequency frequency="10" timeUnit="SECONDS"/>
+			</scheduling-strategy>
+		</scheduler>
+		<logger level="INFO" doc:name="Logger" doc:id="d308dcd3-34ea-4669-89d7-0e518a3be0da" />
+	</flow>
+</mule>

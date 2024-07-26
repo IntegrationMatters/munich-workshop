@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:db="http://www.mulesoft.org/schema/mule/db" xmlns:njams="http://www.mulesoft.org/schema/mule/njams"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/njams http://www.mulesoft.org/schema/mule/njams/current/mule-njams.xsd
+http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd">
+	<configuration-properties doc:name="Configuration properties" doc:id="85240163-3810-4982-b652-60fa0adb6d19" file="properties/app.yaml" />
+	<njams:configuration-file-config name="NJAMS_Configuration_file" doc:name="NJAMS Configuration file" doc:id="b0bb1806-c042-43d6-8cde-74c7691d0f9a" filename="properties/njams.properties" />
+	<db:config name="Database_Config" doc:name="Database Config" doc:id="2f5450a5-b71f-4b65-a481-cfdc5f5fc2e7" >
+		<db:mssql-connection host="vswmssql02" port="1433" user="workshop" password="workshop" databaseName="workshop">
+					<db:connection-properties >
+				<db:connection-property key="integratedSecurity" value="false" />
+				<db:connection-property key="encrypt" value="false" />
+				<db:connection-property key="trustServerCertificate" value="true" />
+			</db:connection-properties>
+		</db:mssql-connection>
+	</db:config>
+</mule>
